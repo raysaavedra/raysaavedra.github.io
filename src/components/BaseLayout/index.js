@@ -19,10 +19,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     height: '100vh',
     overflow: 'auto',
+    backgroundColor: "black"
   },
   mainBody: {
     height: "100%",
-    maxHeight: '93.6vh',
+    maxHeight: '93vh',
     backgroundColor: "#000"
   },
   appBarSpacer: theme.mixins.toolbar,

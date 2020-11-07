@@ -1,7 +1,7 @@
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
-import ContactMail from "@material-ui/icons/ContactMail";
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 
 export default [
   {
@@ -20,8 +20,9 @@ export default [
   //   path: "/portfolio",
   // },
   {
-    icon: <ContactMail style={{color: "tomato"}} />,
-    title: "Contact Me",
+    icon: <EmojiPeopleIcon style={{color: "tomato"}} />,
+    title: "Say Hello",
     path: "/contact",
+    outlined: true
   },
 ];
