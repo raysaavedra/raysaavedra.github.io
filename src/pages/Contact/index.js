@@ -9,7 +9,6 @@ import Particles from "../../components/Particles";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
-    width: "100%",
     backgroundColor: "black",
   },
   title: {
