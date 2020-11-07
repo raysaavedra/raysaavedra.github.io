@@ -13,6 +13,10 @@ import Particles from "../../components/Particles";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
+    [theme.breakpoints.down('sm')]: {
+      width: theme.spacing(30),
+      height: theme.spacing(30),
+    },
     width: theme.spacing(50),
     height: theme.spacing(50),
     margin: theme.spacing(1),

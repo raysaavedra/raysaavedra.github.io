@@ -21,7 +21,7 @@ export default [
   // },
   {
     icon: <EmojiPeopleIcon style={{color: "tomato"}} />,
-    title: "Say Hello",
+    title: "Contact Me!",
     path: "/contact",
     outlined: true
   },
