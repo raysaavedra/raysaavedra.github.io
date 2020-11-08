@@ -2,4 +2,4 @@
 
 You can access my portfolio site here: [raysaavedra.github.io](https://raysaavedra.github.io)
 
-This project was bootstrapped with Create React App.
+This site is powered by React and MaterialUI.

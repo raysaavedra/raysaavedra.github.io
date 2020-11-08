@@ -8,8 +8,9 @@ import Button from '@material-ui/core/Button';
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-import sidebarRoutes from "../../routes/sidebar";
+import tabRoutes from "../../routes/pageTabs";
 import avatar from "../../assets/images/avatar.png";
+import Particles from "../../components/Particles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,8 +40,16 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "tan",
   },
+  tanBg: {
+    backgroundColor: "tan",
+  },
   headerText: {
-    color: "tomato"
+    color: "tomato",
+    fontWeight: "bold"
+  },
+  headerTextBlack: {
+    color: "black",
+    fontWeight: "bold"
   },
   menuSliderContainer: {
     width: 250,
@@ -65,32 +74,34 @@ const BaseLayout = ({ children }) => {
     <div className={classes.root}>
       <AppBar position="absolute" className={classes.appbar}>
         <Toolbar>
-          <Grid
-            container
-            direction="row"
-            justify="flex-end"
-            alignItems="center"
-            spacing={2}
-          >
-            {
-              sidebarRoutes.map((item, index) => {
-                return (
-                  <Grid item key={index}>
-                    <Button
-                      variant="outlined"
-                      startIcon={item.icon}
-                      component={Link}
-                      to={item.path}
-                    >
-                      <Typography variant="body2" className={classes.headerText}>
-                        {item.title}
-                      </Typography> 
-                    </Button>
-                  </Grid>
-                )
-              })
-            }
-          </Grid>
+          <Box mt={2} width="100%">
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              spacing={0}
+            >
+              {
+                tabRoutes.map((item, index) => {
+                  return (
+                    <Grid item key={index}>
+                      <Button
+                        variant={item.buttonLink ? "contained" : "outlined"}
+                        component={item.path && Link}
+                        to={item.path && item.path}
+                        className={item.buttonLink && classes.tanBg}
+                      >
+                        <Typography variant="body1" className={item.buttonLink ? classes.headerTextBlack : classes.headerText}>
+                          {item.title}
+                        </Typography> 
+                      </Button>
+                    </Grid>
+                  )
+                })
+              }
+            </Grid>
+          </Box>
         </Toolbar>
       </AppBar>
 

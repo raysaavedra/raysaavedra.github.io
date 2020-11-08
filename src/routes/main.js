@@ -5,6 +5,7 @@ import {
 
 import BaseLayout from "../components/BaseLayout";
 import Home from "../pages/Home";
+import AboutMe from "../pages/AboutMe";
 import Contact from "../pages/Contact";
 
 const routes = [
@@ -17,6 +18,11 @@ const routes = [
   {
     path: "/contact",
     component: Contact,
+    layout: BaseLayout
+  },
+  {
+    path: "/aboutme",
+    component: AboutMe,
     layout: BaseLayout
   },
   {
